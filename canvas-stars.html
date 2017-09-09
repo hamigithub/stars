@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>我爱大番薯</title>
     <link rel="stylesheet" href="style/style.css" media="screen" type="text/css"/>
+    <link rel="shortcut icon" href="images/bigGuy.ico"/>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -31,11 +33,6 @@
             text-decoration: none;
             color: inherit;
             display: block;
-        }
-
-        a {
-            margin: 30px 0;
-            font-size: 20px;
         }
 
         .content {
@@ -85,6 +82,27 @@
             color: #60606d;
         }
 
+        .linkBox {
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .linkBox a:hover{
+            color: #00ffde;
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-image:-webkit-linear-gradient(left,#00ffde,#076ad4 25%,#00ffde 50%,#076ad4 75%,#00ffde 100%);
+            background-size:200% 100%;
+        }
+
+        @keyframes gradient{
+            from{background-position:0 0;}
+            to{background-position:-100% 0;}
+        }
+        .linkBox:hover a{
+            animation:gradient 5s linear infinite;
+        }
     </style>
 </head>
 <body>
@@ -92,13 +110,30 @@
     <img class="demo-img" src="images/cats.png"/>
 </div>
 <div class="content">
-    <p>沙雕，看啥呢</p>
+    <p>看啥呢</p>
     <p>我啥都吃</p>
+
 </div>
-<div>
-    <p class="content-text">
+<div class="content-text">
+    <div class="linkBox">
+        <a href="http://www.baidu.com">度娘传送门</a>
+        <a href="javascript:void(0);">wiki</a>
+        <a href="javascript:void(0);">喜欢我举手</a>
+        <a href="javascript:void(0);">什么是资源共享</a>
+    </div>
+    <div class="linkBox">
+        <a href="http://www.baidu.com">谁是娜奥美和丽莎</a>
+        <a href="javascript:void(0);">我为什么不买别墅</a>
+        <a href="javascript:void(0);">B站炸了</a>
+    </div>
+    <div class="linkBox">
+        <a href="http://www.baidu.com">曼珠沙华和曼珠罗华</a>
+        <a href="javascript:void(0);">我在北京博物馆扫地的日子</a>
+    </div>
+    <p>
         ©HAMI MAX, powered by Hami THX.法律声明 <br>
-        转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：980797900@QQ.com
+        转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，
+        商业媒体及纸媒请先联系：980797900@QQ.com
     </p>
 </div>
 <div class="canvas-box">
