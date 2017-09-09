@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #090723;
+}
+
+.canvas-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+a:link, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.content {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+}
+
+.demo {
+    width: 300px;
+    margin: 0 auto;
+    animation: UpDown 2s infinite alternate;
+    -webkit-animation: UpDown 2s alternate infinite; /*infinite无限播放，alternate轮流反向播放*/
+}
+
+.demo-img {
+    width: 100%;
+}
+
+@keyframes UpDown {
+    from {
+        margin-top: 20px;
+    }
+    to {
+        margin-top: 10px;
+    }
+}
+
+@-webkit-keyframes UpDown {
+    from {
+        margin-top: 20px;
+    }
+    to {
+        margin-top: 10px;
+    }
+}
+
+.content-text {
+    margin: 0 30px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    font-size: 12px;
+    color: #60606d;
+}
+
+.linkBox {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.linkBox a:hover {
+    color: #00ffde;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #00ffde, #076ad4 25%, #00ffde 50%, #076ad4 75%, #00ffde 100%);
+    background-size: 200% 100%;
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+.linkBox:hover a {
+    animation: gradient 5s linear infinite;
+}
+
+.footContent {
+    text-align: center;
+}
