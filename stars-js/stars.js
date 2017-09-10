@@ -7,6 +7,127 @@ var mouseX = WINDOW_WIDTH / 2;
 var mouseY = WINDOW_HEIGHT / 2;
 var rnd;
 
+$(document).on("click", "#MVC", function (e) {
+    // bootbox.confirm("Hello world!", function (result) {
+    //     if(result) {
+    //         alert('点击了确认按钮');
+    //     } else {
+    //         alert('点击了取消按钮');
+    //     }
+    // });
+    // bootbox.dialog({
+    //     message: "I am a custom confirm",
+    //     title: "Confirm title",
+    //     buttons: {
+    //         Cancel: {
+    //             label: "Cancel",
+    //             className: "btn-default",
+    //             callback: function () {
+    //                 alert("Cancel");
+    //             }
+    //         }
+    //         , OK: {
+    //             label: "OK",
+    //             className: "btn-primary",
+    //             callback: function () {
+    //                 alert("OK");
+    //             }
+    //         }
+    //     }
+    // });
+
+    bootbox.confirm({
+        buttons: {
+            confirm: {
+                label: 'okay',
+                className: 'btn-myStyle'
+            },
+            cancel: {
+                label: 'null',
+                className: 'btn-default'
+            }
+        },
+        message: '视心情迭代不定期更新，在这之前你可能希望阅读以下，确定后暴露传送门',
+        callback: function (result) {
+            if (result) {
+                location.href = 'https://github.com/hamigithub/You-Dont-Know-JS';
+            } else {
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: 'okay',
+                            className: 'btn-myStyle'
+                        }
+                    },
+                    message: '放弃不失为美!'
+                    // callback: function () {
+                    //
+                    // }
+                    // title: "环境构建中"
+                });
+            }
+        },
+
+        title: "环境搭建中，敬请期待"
+    });
+
+});
+
+$(document).on("click", "#UI", function (e) {
+    bootbox.alert({
+        buttons: {
+            ok: {
+                label: 'okay',
+                className: 'btn-myStyle'
+            }
+        },
+        message: '此对象将无限趋向随心所欲，前所未有的API!',
+        callback: function () {
+
+        },
+        title: "环境构建中，敬请期待"
+    });
+});
+
+$(document).on("click", "#wiki", function (e) {
+
+
+    bootbox.confirm({
+        buttons: {
+            confirm: {
+                label: 'okay',
+                className: 'btn-myStyle'
+            },
+            cancel: {
+                label: 'null',
+                className: 'btn-default'
+            }
+        },
+        message: '"你或许需要突破某些限制，比如语言，等！"',
+        callback: function (result) {
+            if (result) {
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: 'okay',
+                            className: 'btn-myStyle'
+                        }
+                    },
+                    message: '这是指向自由的百科全书!',
+                    callback: function () {
+                        location.href = 'https://en.wikipedia.org/wiki/Main_Page';
+                    }
+                    // title: "环境构建中"
+                });
+
+            } else {
+            }
+        },
+
+        title: "环境搭建中"
+    });
+});
+
 window.onload = function () {
     canvas = document.getElementById('canvas');
     canvas.width = WINDOW_WIDTH;
